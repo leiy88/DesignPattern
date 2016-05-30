@@ -10,9 +10,11 @@ public class Chargable {
     }
 
     public static void main(String[] args) {
+        // 类适配器
         Chargable chargable = new Chargable();
         chargable.charge(new SocketAdapter());
 
+        // 对象适配器
         ObjectSocketAdapter objectSocketAdapter = new ObjectSocketAdapter();
         ChineseSocket chineseSocket = new ChineseSocket() {
             @Override

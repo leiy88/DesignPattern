@@ -1,21 +1,10 @@
 package bridge.improve;
 
-import bridge.Booking;
+import bridge.ordinary.Booking;
 
 /**
  * Created by Administrator on 2016/5/29.
  */
-public abstract class Road {
-
-    private Booking booking;
-
-    public abstract void getPrice();
-
-    public Booking getBooking() {
-        return booking;
-    }
-
-    public void setBooking(Booking booking) {
-        this.booking = booking;
-    }
+public interface Road {
+    public void getPrice();
 }
