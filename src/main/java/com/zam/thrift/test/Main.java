@@ -21,7 +21,7 @@ public class Main {
         try {
             TServerTransport tServerTransport = new TServerSocket(8888);
             TProtocolFactory factory = new TCompactProtocol.Factory();
-            TProcessor processor = new Hello.Processor<>(new HelloImpl());
+            TProcessor processor = new Hello.Processor<HelloImpl>(new HelloImpl());
             TServer server = new TThreadPoolServer(new TThreadPoolServer.Args(
                     tServerTransport
             ).protocolFactory(factory).processor(processor));
